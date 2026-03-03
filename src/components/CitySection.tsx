@@ -141,14 +141,20 @@ export default function CitySection({ id, cityLabel, cityName, cityNameItalic, c
       `;
     }).join('');
 
-    track.getBoundingClientRect();
+    void track.offsetHeight;
 
     track.style.willChange = 'transform';
     track.style.cursor = 'grab';
 
     const setTransform = (x: number) => {
-      const maxScroll = Math.max(0, track.scrollWidth - (track.parentElement?.offsetWidth ?? 0));
+      const container = track.parentElement;
+      if (!container) return;
+
+      const containerWidth = container.offsetWidth;
+      const trackWidth = track.scrollWidth;
+      const maxScroll = Math.max(0, trackWidth - containerWidth);
       const clampedX = Math.max(-maxScroll, Math.min(0, x));
+
       track.style.transform = `translate3d(${clampedX}px, 0, 0)`;
       dragStateRef.current.currentX = clampedX;
     };
@@ -176,7 +182,13 @@ export default function CitySection({ id, cityLabel, cityName, cityNameItalic, c
         velocity *= friction;
         position += velocity;
 
-        const maxScroll = Math.max(0, track.scrollWidth - (track.parentElement?.offsetWidth ?? 0));
+        const container = track.parentElement;
+        if (!container) return;
+
+        const containerWidth = container.offsetWidth;
+        const trackWidth = track.scrollWidth;
+        const maxScroll = Math.max(0, trackWidth - containerWidth);
+
         if (position > 0) {
           position = 0;
           velocity = 0;
@@ -287,11 +299,18 @@ export default function CitySection({ id, cityLabel, cityName, cityNameItalic, c
     const container = track.parentElement;
     if (!container) return;
 
-    const scrollAmount = 230 * 3;
+    const card = track.querySelector('.model-card') as HTMLElement;
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth;
+    const gap = 19.2;
+    const scrollAmount = (cardWidth + gap) * 3;
     const currentX = dragStateRef.current.currentX;
     const targetX = currentX + (scrollAmount * -direction);
 
-    const maxScroll = Math.max(0, track.scrollWidth - container.offsetWidth);
+    const containerWidth = container.offsetWidth;
+    const trackWidth = track.scrollWidth;
+    const maxScroll = Math.max(0, trackWidth - containerWidth);
 
     const clampedX = Math.max(-maxScroll, Math.min(0, targetX));
 

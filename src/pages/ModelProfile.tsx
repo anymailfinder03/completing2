@@ -1042,7 +1042,6 @@ export default function ModelProfile() {
   const [model, setModel] = useState<ModelData | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [city, setCity] = useState<string | null>(null);
-  const [modelName, setModelName] = useState<string | null>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -1055,7 +1054,6 @@ export default function ModelProfile() {
     }
 
     setCity(cityParam);
-    setModelName(nameParam);
 
     if (cityParam && nameParam && cityModels[cityParam]?.[nameParam]) {
       setModel(cityModels[cityParam][nameParam]);
@@ -1332,7 +1330,7 @@ export default function ModelProfile() {
               'dn': 'danang',
               'nt': 'nhatrang'
             };
-            const sectionId = cityMap[city] || 'saigon';
+            const sectionId = city ? (cityMap[city] || 'saigon') : 'saigon';
             window.location.href = `/#${sectionId}`;
           }}>
             Xem tất cả {model?.city}
