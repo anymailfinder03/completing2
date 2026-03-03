@@ -96,7 +96,7 @@ export default function Hero() {
           <div className="hero-actions">
             <button
               className="btn-hero-primary"
-              onClick={() => window.open('https://t.me/hoahong8388', '_blank')}
+              onClick={() => scrollToCity('saigon')}
             >
               Xem ngay
             </button>

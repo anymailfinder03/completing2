@@ -1341,7 +1341,7 @@ export default function ModelProfile() {
       <footer className="profile-footer">
         <div className="profile-footer-logo">Checker<em>Viet</em></div>
         <div className="profile-footer-text">© 2025 CheckerViet</div>
-        <button className="profile-nav-cta">Liên hệ ngay</button>
+        <button className="profile-nav-cta" onClick={() => window.open('https://t.me/hoahong8388', '_blank')}>Liên hệ ngay</button>
       </footer>
     </div>
   );
