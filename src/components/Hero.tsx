@@ -38,7 +38,7 @@ export default function Hero() {
     <>
       <nav className={isScrolled ? 'scrolled' : ''}>
         <a href="#" className="logo">
-          Lux<em>Date</em>
+          Checker<em>Viet</em>
         </a>
 
         <div className="nav-cities">
