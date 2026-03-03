@@ -84,9 +84,9 @@ export default function Hero() {
 
         <div className="hero-center">
           <h1 className="hero-title">
-            Khoảnh khắc
+            Gọi em
             <br />
-            <em>đáng nhớ</em>
+            <em>đêm nay</em>
           </h1>
           <p className="hero-sub">
             Hot TikToker, Hoa hậu, Tiếp viên hàng không — những nàng thơ đang chờ bạn.
