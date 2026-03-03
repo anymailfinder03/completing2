@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="footer-copy">
-          © 2025 LuxDate · Premium Companion Services · All rights reserved
+          © 2025 CheckerViet · All rights reserved
         </div>
         <div className="footer-copy">Phục vụ 24/7 · Bảo mật tuyệt đối</div>
       </div>
