@@ -6,7 +6,7 @@ export default function Footer() {
           <a href="#" className="logo">
             Checker<em>Viet</em>
           </a>
-          <p>Dịch vụ bạn đồng hành cao cấp hàng đầu Việt Nam. Sang trọng, lịch sự và đáng tin cậy.</p>
+          <p>Dịch vụ PGA - SGBB cao cấp hàng đầu Việt Nam.</p>
         </div>
         <div className="footer-col">
           <h5>THÀNH PHỐ</h5>
