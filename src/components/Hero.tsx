@@ -79,7 +79,7 @@ export default function Hero() {
         <div className="hero-lines"></div>
 
         <div className="hero-topleft">
-          <div className="hero-eyebrow">Luôn tuyển PGA - SGBB trên cả nước</div>
+          <div className="hero-eyebrow">Luôn tuyển PGA - SGBB</div>
         </div>
 
         <div className="hero-center">
@@ -89,9 +89,9 @@ export default function Hero() {
             <em>đêm nay</em>
           </h1>
           <p className="hero-sub">
-            Hot TikToker, Hoa hậu, Tiếp viên hàng không — những nàng thơ đang chờ bạn.
+            Cung cấp dịch vụ PGA - SBGG trên cả nước
             <br />
-            Một cuộc hẹn đặc biệt, chỉ cần một cú chạm.
+            Cao cấp, Sang trọng, Bảo mật
           </p>
           <div className="hero-actions">
             <button
